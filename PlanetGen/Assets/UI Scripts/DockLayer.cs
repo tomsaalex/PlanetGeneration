@@ -5,24 +5,59 @@ using UnityEngine;
 public class DockLayer : MonoBehaviour
 {
     RectTransform rt;
-    float maxHeight;
+    public float ogHeight;
+    public bool docked;
 
     private void Start()
     {
+        docked = false;
         rt = GetComponent<RectTransform>();
-        maxHeight = 0;
+        ogHeight = rt.sizeDelta.y;
     }
 
-    public void Dock()
+    public void DockManager()
     {
-        foreach (Transform child in rt)
+        if (rt.gameObject.GetComponent<DockLayer>().docked)
         {
-            if (child.tag != "Not Dock")
-                child.gameObject.SetActive(!child.gameObject.activeSelf);
-            else
-                maxHeight = child.position.y + 15;
+            UnDock();
+            docked = false;
         }
+        else
+        {
+            Dock(0, true);
+            docked = true;
+        }
+    }
+
+    public void Dock(float heightDiff, bool disableItems)
+    {
+        if(disableItems)
+            foreach (RectTransform child in rt)
+            {
+                if (child.tag != "Not Dock")
+                     child.gameObject.SetActive(!child.gameObject.activeSelf);
+            }
+
         
+        if(heightDiff == 0)
+            heightDiff = rt.sizeDelta.y - 15;
         
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, rt.sizeDelta.y - heightDiff);
+        if(rt.parent.gameObject.tag != "Not Dock")
+            rt.transform.parent.GetComponent<DockLayer>().Dock(heightDiff, false);
+    }
+
+    public void UnDock()
+    {
+        Debug.Log($"Undocking {rt.gameObject.name}");
+        foreach (RectTransform child in rt)
+        {
+            if (!child.gameObject.active)
+                child.gameObject.SetActive(true);
+        }
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, rt.gameObject.GetComponent<DockLayer>().ogHeight);
+
+        if (rt.parent.gameObject.tag != "Not Dock")
+            rt.transform.parent.GetComponent<DockLayer>().UnDock();
     }
 }
