@@ -49,11 +49,19 @@ public class DockLayer : MonoBehaviour
 
     public void UnDock()
     {
-        Debug.Log($"Undocking {rt.gameObject.name}");
+        //Debug.Log($"Undocking {rt.gameObject.name}");
         foreach (RectTransform child in rt)
         {
             if (!child.gameObject.active)
+            {
                 child.gameObject.SetActive(true);
+                if (child.gameObject.tag == "Layer")
+                {
+                    child.GetComponent<DockLayer>().UnDock();
+                    child.GetComponent<DockLayer>().docked = false;
+
+                }
+            }
         }
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, rt.gameObject.GetComponent<DockLayer>().ogHeight);
 

@@ -19,4 +19,10 @@ public class FlipSprite : MonoBehaviour
         spriteToFlip.transform.Rotate(flipAngle);
         flipAngle *= -1;
     }
+
+    void OnEnable()
+    {
+        if (flipAngle.z < 0)
+            Flip();
+    }
 }
