@@ -8,13 +8,22 @@ public class DockLayer : MonoBehaviour
     public float ogHeight;
     public bool docked;
 
-    private void Start()
+    private void Awake()
     {
         docked = false;
         rt = GetComponent<RectTransform>();
         ogHeight = rt.sizeDelta.y;
     }
 
+    /*public void OnEnable()
+    {
+        if(docked == )
+        {
+            docked = true;
+            UnDock();
+        }    
+    }
+    */
     public void DockManager()
     {
         if (rt.gameObject.GetComponent<DockLayer>().docked)
@@ -59,7 +68,14 @@ public class DockLayer : MonoBehaviour
                 {
                     child.GetComponent<DockLayer>().UnDock();
                     child.GetComponent<DockLayer>().docked = false;
-
+                    
+                    //Keep this bit here for the future, it might help
+                    /* 
+                    if (child.GetComponent<DockLayer>().docked == true)
+                        child.GetComponent<DockLayer>().Dock(0, true);
+                    else
+                        child.GetComponent<DockLayer>().docked = false;
+                    */
                 }
             }
         }
