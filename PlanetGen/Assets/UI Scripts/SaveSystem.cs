@@ -4,47 +4,53 @@ using UnityEngine;
 using Newtonsoft.Json;
 
 
-public class SaveSystem : MonoBehaviour
+public static  class SaveSystem
 {
+    public static PlanetStruct currentPlanet;
 
-
-    
-    void Start()
+    private static void Awake()
     {
+        currentPlanet = new PlanetStruct();
     }
 
-    struct Planet
+    public static void Print()
     {
-        string name;
-        int resolution;
-        float radius;
-
-        int noiseLayersLength;
-        NoiseLayer[] noiseLayers;
+        string json = JsonConvert.SerializeObject(currentPlanet);
+        Debug.Log(json);
     }
 
-    struct NoiseLayer
+    public struct PlanetStruct
     {
-        bool enabled;
-        bool useFirstLayerAsMask;
+        public string name;
+        public float resolution;
+        public float radius;
 
-        NoiseSettings noiseSettings;
+        public int noiseLayersLength;
+        public NoiseLayer[] noiseLayers;
     }
 
-    struct NoiseSettings
+    public struct NoiseLayer
     {
-        string filterType;
+        public bool enabled;
+        public bool useFirstLayerAsMask;
 
-        float strength;
-        int numLayers;
-        float baseRoughness;
-        float persistence;
+        public NoiseSettings noiseSettings;
+    }
 
-        float CenterX;
-        float CenterY;
-        float CenterZ;
+    public struct NoiseSettings
+    {
+        public string filterType;
 
-        float minValue;
-        float weightMultiplier;
+        public float strength;
+        public int numLayers;
+        public float baseRoughness;
+        public float persistence;
+
+        public float CenterX;
+        public float CenterY;
+        public float CenterZ;
+
+        public float minValue;
+        public float weightMultiplier;
     }
 }

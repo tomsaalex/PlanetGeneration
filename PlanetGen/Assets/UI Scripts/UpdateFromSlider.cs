@@ -9,6 +9,7 @@ public class UpdateFromSlider : MonoBehaviour
     TextMeshProUGUI textToUpdate;
     public Slider sliderToTakeFrom;
     public Planet p;
+
     void Start()
     {
         textToUpdate = this.GetComponent<TextMeshProUGUI>();
