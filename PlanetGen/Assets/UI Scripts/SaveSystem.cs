@@ -11,6 +11,7 @@ public static  class SaveSystem
     private static void Awake()
     {
         currentPlanet = new PlanetStruct();
+        currentPlanet.noiseLayers = new NoiseLayer[1001];
     }
 
     public static void Print()
@@ -39,7 +40,7 @@ public static  class SaveSystem
 
     public struct NoiseSettings
     {
-        public string filterType;
+        public int filterType;
 
         public float strength;
         public int numLayers;
