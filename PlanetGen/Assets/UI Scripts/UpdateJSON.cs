@@ -11,6 +11,7 @@ public class UpdateJSON: MonoBehaviour
     public Planet planet;
     public TMP_InputField radiusInput;
     public TMP_InputField nameInput;
+    public TMP_InputField noiseLayersLengthInput;
     public GameObject noiseLayersContainer;
     void Awake()
     {
@@ -20,13 +21,13 @@ public class UpdateJSON: MonoBehaviour
     public void UpdateName()
     {
         SaveSystem.currentPlanet.name = nameInput.text;
-        SaveSystem.Print();
+        //SaveSystem.Print();
     }
 
     public void UpdateResolution()
     {
         SaveSystem.currentPlanet.resolution = (int)resolutionSlider.value;
-        SaveSystem.Print();
+        //SaveSystem.Print();
     }
 
     public void UpdateRadius()
@@ -35,16 +36,23 @@ public class UpdateJSON: MonoBehaviour
         ///This needs a tryparse and additional checks for letters and other characters
       
         SaveSystem.currentPlanet.radius = float.Parse(radiusInput.text);
-        SaveSystem.Print();
+        //SaveSystem.Print();
     }
 
-    public void UpdateLayerFilterType(GameObject G)
+    public void UpdateNumLayers()
+    {
+        string lengthInput = noiseLayersLengthInput.text;
+        SaveSystem.currentPlanet.noiseLayersLength = int.Parse(lengthInput);
+    }
+
+    /*public void UpdateLayerFilterType(GameObject G)
     {
 
         //UnityEngine.Debug.Log(this.transform.transform.name);
         int positionInArray = int.Parse(G.transform.parent.parent.name) - 1;
         
         SaveSystem.currentPlanet.noiseLayers[positionInArray].noiseSettings.filterType = G.GetComponent<Dropdown>().value;
-        SaveSystem.Print();
+        //SaveSystem.Print();
     }
+    */
 }

@@ -6,6 +6,5 @@ public class UpdateLayer : MonoBehaviour
 {
    // public UpdateJSON UJ;
 
-    //
-    void 
+    //void 
 }

@@ -8,10 +8,10 @@ public static  class SaveSystem
 {
     public static PlanetStruct currentPlanet;
 
-    private static void Awake()
+    public static void Awake()
     {
         currentPlanet = new PlanetStruct();
-        currentPlanet.noiseLayers = new NoiseLayer[1001];
+        currentPlanet.noiseLayers = new NoiseLayer[2];
     }
 
     public static void Print()
@@ -45,6 +45,7 @@ public static  class SaveSystem
         public float strength;
         public int numLayers;
         public float baseRoughness;
+        public float roughness;
         public float persistence;
 
         public float CenterX;
