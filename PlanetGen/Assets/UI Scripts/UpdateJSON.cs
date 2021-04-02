@@ -15,7 +15,7 @@ public class UpdateJSON: MonoBehaviour
     public GameObject noiseLayersContainer;
     void Awake()
     {
-        UpdateResolution();
+        //UpdateResolution();
     }
 
     public void UpdateName()
