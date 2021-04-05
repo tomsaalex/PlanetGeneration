@@ -11,13 +11,19 @@ public class ConstructLayer : MonoBehaviour
     SaveSystem.NoiseSettings currentSettings;
 
 
+    private void Awake()
+    {
+        currentLayer = new SaveSystem.NoiseLayer();
+        currentSettings = new SaveSystem.NoiseSettings();
+    }
+
     void UpdateCurrentLayer()
     {
         currentLayer.noiseSettings = currentSettings;
         SaveSystem.currentPlanet.noiseLayers[int.Parse(this.name) - 1] = currentLayer;
         SaveSystem.Print();
-
     }
+
 
     public void UpdateEnabled()
     {
@@ -66,7 +72,7 @@ public class ConstructLayer : MonoBehaviour
     {
         int numLayers = (int)this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("NumLayersSlider").GetComponent<Slider>().value;
         currentSettings.numLayers = numLayers;
-
+        
         UpdateCurrentLayer(); 
         //SaveSystem.Print();
     }

@@ -39,10 +39,9 @@ public class UpdateJSON: MonoBehaviour
         //SaveSystem.Print();
     }
 
-    public void UpdateNumLayers()
+    public void UpdateNumLayers(int value)
     {
-        string lengthInput = noiseLayersLengthInput.text;
-        SaveSystem.currentPlanet.noiseLayersLength = int.Parse(lengthInput);
+        SaveSystem.currentPlanet.noiseLayersLength += value;
     }
 
     /*public void UpdateLayerFilterType(GameObject G)
