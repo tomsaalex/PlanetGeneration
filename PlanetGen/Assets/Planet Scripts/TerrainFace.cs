@@ -79,6 +79,7 @@ public class TerrainFace
                 Vector3 pointOnUnitCube = localUp + (percent.x - .5f) * 2 * axisA + (percent.y - .5f) * 2 * axisB;
                 Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
 
+                Debug.Log(i + " " + uv.Length);
                 uv[i].x =colourGenerator.BiomePercentFromPoint(pointOnUnitSphere);
             }
         }
