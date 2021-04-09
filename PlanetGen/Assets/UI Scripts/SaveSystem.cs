@@ -30,7 +30,7 @@ public static class SaveSystem
     public class PlanetStruct
     {
         public string name;
-        public float resolution;
+        public int resolution;
         public float radius;
 
         public int noiseLayersLength;

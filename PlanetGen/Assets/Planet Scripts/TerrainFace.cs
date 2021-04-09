@@ -25,6 +25,7 @@ public class TerrainFace
 
     public void ConstructMesh()
     {
+        Debug.Log("Started");
         Vector3[] vertices = new Vector3[resolution * resolution];
         int[] triangles = new int[(resolution - 1) * (resolution - 1) * 6];
         Vector2[] uv = (mesh.uv.Length == vertices.Length) ? mesh.uv : new Vector2[vertices.Length];
@@ -59,6 +60,10 @@ public class TerrainFace
         }
         mesh.Clear();
         mesh.vertices = vertices;
+
+        //Debug.Log(triangles.Length);
+        //foreach (int tri in triangles)
+        //    Debug.Log(tri);
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
 
