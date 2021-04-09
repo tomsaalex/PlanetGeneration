@@ -56,8 +56,8 @@ public static class SaveSystem
 
         public NoiseLayer()
         {
-            enabled = false;
-            useFirstLayerAsMask = false;
+            enabled = true;
+            useFirstLayerAsMask = true;
 
             noiseSettings = new NoiseSettings();
         }
