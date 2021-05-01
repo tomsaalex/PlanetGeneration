@@ -1,1 +1,1 @@
-{"name":"","resolution":103,"radius":3.0,"noiseLayersLength":0,"noiseLayers":[]}
+{"name":"","resolution":81,"radius":2.0,"noiseLayersLength":1,"noiseLayers":[{"enabled":false,"useFirstLayerAsMask":true,"noiseSettings":{"filterType":0,"strength":0.0,"numLayers":4,"baseRoughness":0.0,"roughness":0.0,"persistence":0.0,"CenterX":0.0,"CenterY":0.0,"CenterZ":0.0,"minValue":0.0,"weightMultiplier":0.0}}]}
