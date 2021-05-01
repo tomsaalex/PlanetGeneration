@@ -14,10 +14,9 @@ public static class SaveSystem
 
     public static void PlanetToJSON(PlanetStruct planet)
     {
-        Debug.Log(planet.name);
         string json = JsonUtility.ToJson(planet);
-        string path = Application.dataPath + "/SaveFiles/file.json";
         Debug.Log(json);
+        string path = Application.dataPath + "/SaveFiles/file.json";
         File.WriteAllText(path, json);
     }
 
