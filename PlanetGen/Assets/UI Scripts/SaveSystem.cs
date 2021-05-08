@@ -6,17 +6,24 @@ using System.IO;
 public static class SaveSystem
 {
     public static PlanetStruct currentPlanet;
-    
+    public static string path;
     public static void Awake()
     {
         currentPlanet = new PlanetStruct();
+    }
+
+    public static void GetPath(string pathFromButton)
+    {
+        path = Application.dataPath + "/SaveFiles/" + pathFromButton + ".json";
+        GameObject.FindWithTag("GameManager").GetComponent<UpdatePlanetFromJSON>().path = path;
+        GameObject.FindWithTag("GameManager").GetComponent<UpdateUIFromJSON>().path = path;
+        Debug.Log(path);
     }
 
     public static void PlanetToJSON(PlanetStruct planet)
     {
         string json = JsonUtility.ToJson(planet);
         Debug.Log(json);
-        string path = Application.dataPath + "/SaveFiles/file.json";
         File.WriteAllText(path, json);
     }
 

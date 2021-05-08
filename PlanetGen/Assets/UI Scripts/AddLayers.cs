@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class AddLayers : MonoBehaviour
 {
-    GameObject layersContainer;
+    public GameObject layersContainer;
     public GameObject layerPrefab;
     public int lastLayerName = 0;
-    private void Awake()
+
+    public void Awake()
     {
-        layersContainer = this.gameObject;    
+        layersContainer = this.gameObject;
     }
 
     public void AddLayer()

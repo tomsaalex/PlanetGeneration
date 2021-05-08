@@ -10,7 +10,7 @@ public class UpdateFromSlider : MonoBehaviour
     public Slider sliderToTakeFrom;
     public Planet p;
 
-    void Start()
+    void Awake()
     {
         textToUpdate = this.GetComponent<TextMeshProUGUI>();
         UpdateText();
@@ -18,6 +18,9 @@ public class UpdateFromSlider : MonoBehaviour
 
     public void UpdateText()
     {
+        Debug.Log(sliderToTakeFrom.value);
+        Debug.Log(sliderToTakeFrom.maxValue);
+        Debug.Log(textToUpdate.text);
         textToUpdate.text = $"{sliderToTakeFrom.value} / {sliderToTakeFrom.maxValue}";
     }
 }

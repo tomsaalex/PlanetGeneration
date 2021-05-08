@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Not Dock
   - Layer
+  - GameManager
+  - GeneralSettings
+  - ShapeSettings
+  - ResolutionSlider
+  - NameInput
   layers:
   - Default
   - TransparentFX

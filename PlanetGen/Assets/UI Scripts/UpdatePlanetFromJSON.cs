@@ -9,13 +9,13 @@ public class UpdatePlanetFromJSON : MonoBehaviour
 {
     public Planet planet;
     PlanetStruct json; 
-    string path;
+    public string path;
 
     
 
     private void Awake()
     {
-        path = Application.dataPath + "/SaveFiles/file.json";
+        //path = Application.dataPath + "/SaveFiles/file.json";
     }
 
     public void UpdatePlanet()
