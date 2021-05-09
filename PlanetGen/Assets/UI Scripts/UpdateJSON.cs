@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using System.Diagnostics;
 
 public class UpdateJSON: MonoBehaviour
 {
@@ -27,6 +26,7 @@ public class UpdateJSON: MonoBehaviour
     public void UpdateResolution()
     {
         SaveSystem.currentPlanet.resolution = (int)resolutionSlider.value;
+        Debug.Log("UpdateResolution was called");
         //SaveSystem.Print();
     }
 

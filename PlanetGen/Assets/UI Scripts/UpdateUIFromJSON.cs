@@ -29,6 +29,7 @@ public class UpdateUIFromJSON : MonoBehaviour
     {
         string jsonAsText = File.ReadAllText(path);
         json = JsonUtility.FromJson<PlanetStruct>(jsonAsText);
+        //json = SaveSystem.currentPlanet;
         canvas = layersContainer.transform.parent.parent.parent.parent;
 
         GeneralSettings = FindChildWithTag(canvas, "GeneralSettings");
@@ -64,6 +65,7 @@ public class UpdateUIFromJSON : MonoBehaviour
 
 
         }
+
 
 
     }

@@ -21,7 +21,7 @@ public class ConstructLayer : MonoBehaviour
     {
         currentLayer.noiseSettings = currentSettings;
         SaveSystem.currentPlanet.noiseLayers[int.Parse(this.name) - 1] = currentLayer;
-        SaveSystem.Print();
+        //SaveSystem.Print();
     }
 
 

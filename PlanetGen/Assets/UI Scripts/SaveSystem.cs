@@ -7,6 +7,7 @@ public static class SaveSystem
 {
     public static PlanetStruct currentPlanet;
     public static string path;
+
     public static void Awake()
     {
         currentPlanet = new PlanetStruct();
@@ -23,6 +24,7 @@ public static class SaveSystem
     public static void PlanetToJSON(PlanetStruct planet)
     {
         string json = JsonUtility.ToJson(planet);
+        Debug.Log($"The resolution is {currentPlanet.resolution}");
         Debug.Log(json);
         File.WriteAllText(path, json);
     }
@@ -45,7 +47,7 @@ public static class SaveSystem
         public PlanetStruct()
         {
             name = "";
-            resolution = 0;
+            resolution = 2;
             radius = 0;
 
             noiseLayersLength = 0;
