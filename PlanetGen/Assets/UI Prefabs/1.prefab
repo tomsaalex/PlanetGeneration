@@ -3798,7 +3798,7 @@ GameObject:
   - component: {fileID: 2417376183297149219}
   - component: {fileID: 2417376183297149218}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NumLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7660,9 +7660,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2417376184059876295}
   - component: {fileID: 2417376184059876297}
+  - component: {fileID: 3534307696664653881}
   - component: {fileID: 2417376184059876296}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: NumOfChosenLayers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7684,8 +7685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178.09, y: -33.14}
-  m_SizeDelta: {x: 22.3311, y: 11.99408}
+  m_AnchoredPosition: {x: 180.59, y: -33.204}
+  m_SizeDelta: {x: 27.33421, y: 12.12207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2417376184059876297
 CanvasRenderer:
@@ -7695,6 +7696,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2417376184059876294}
   m_CullTransparentMesh: 0
+--- !u!114 &3534307696664653881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2417376184059876294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86083dbe69017ca49b7f2d70a839b80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderToTakeFrom: {fileID: 2417376184204310050}
+  p: {fileID: 0}
 --- !u!114 &2417376184059876296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7749,7 +7764,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -8433,6 +8448,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2417376184379194767}
         m_MethodName: UpdateNumLayers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3534307696664653881}
+        m_MethodName: UpdateText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

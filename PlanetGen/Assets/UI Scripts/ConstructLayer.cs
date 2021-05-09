@@ -4,6 +4,7 @@ using UnityEngine;
 using static SaveSystem;
 using TMPro;
 using UnityEngine.UI;
+using System.Globalization;
 
 public class ConstructLayer : MonoBehaviour
 {
@@ -61,7 +62,7 @@ public class ConstructLayer : MonoBehaviour
         //TODO
         //Additional checks like a tryparse
         
-        float strengthValue = float.Parse(strengthString);
+        float strengthValue = float.Parse(strengthString, CultureInfo.InvariantCulture);
         currentSettings.strength = strengthValue;
 
         UpdateCurrentLayer(); 
@@ -83,7 +84,7 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
         string baseRoughnessInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("BaseRoughnessInput").GetComponent<TMP_InputField>().text;
 
-        float baseRoughness = float.Parse(baseRoughnessInput);
+        float baseRoughness = float.Parse(baseRoughnessInput, CultureInfo.InvariantCulture);
         currentSettings.baseRoughness = baseRoughness;
 
         UpdateCurrentLayer(); 
@@ -96,7 +97,7 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
         string roughnessInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("RoughnessInput").GetComponent<TMP_InputField>().text;
 
-        float roughness = float.Parse(roughnessInput);
+        float roughness = float.Parse(roughnessInput, CultureInfo.InvariantCulture);
         currentSettings.roughness = roughness;
 
         UpdateCurrentLayer(); 
@@ -109,7 +110,7 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
         string persistenceInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("PersistenceInput").GetComponent<TMP_InputField>().text;
 
-        float persistence = float.Parse(persistenceInput);
+        float persistence = float.Parse(persistenceInput, CultureInfo.InvariantCulture);
         currentSettings.persistence = persistence;
 
         UpdateCurrentLayer(); 
@@ -122,7 +123,7 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
         string centerXInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("Center").Find("CenterXInput").GetComponent<TMP_InputField>().text;
 
-        float centerX = float.Parse(centerXInput);
+        float centerX = float.Parse(centerXInput, CultureInfo.InvariantCulture);
         currentSettings.CenterX = centerX;
 
         UpdateCurrentLayer(); 
@@ -135,7 +136,7 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
         string centerYInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("Center").Find("CenterYInput").GetComponent<TMP_InputField>().text;
 
-        float centerY = float.Parse(centerYInput);
+        float centerY = float.Parse(centerYInput, CultureInfo.InvariantCulture);
         currentSettings.CenterY = centerY;
 
 
@@ -149,7 +150,7 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
         string centerZInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("Center").Find("CenterZInput").GetComponent<TMP_InputField>().text;
 
-        float centerZ = float.Parse(centerZInput);
+        float centerZ = float.Parse(centerZInput, CultureInfo.InvariantCulture);
         currentSettings.CenterZ = centerZ;
 
 
@@ -163,7 +164,7 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
         string minValueInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("MinValueInput").GetComponent<TMP_InputField>().text;
 
-        float minValue = float.Parse(minValueInput);
+        float minValue = float.Parse(minValueInput, CultureInfo.InvariantCulture);
         currentSettings.minValue = minValue;
 
         UpdateCurrentLayer(); 
