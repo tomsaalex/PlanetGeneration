@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class QuickEnableAndDisable : MonoBehaviour
 {
+    GameObject GameManager;
+    UpdateUIFromJSON niceComponent;
     private void OnEnable()
     {
-        GameObject.FindWithTag("GameManager").GetComponent<UpdateUIFromJSON>().FindChildWithTag(this.gameObject.transform, "GeneralSettings").gameObject.SetActive(true);
-        GameObject.FindWithTag("GameManager").GetComponent<UpdateUIFromJSON>().FindChildWithTag(this.gameObject.transform, "ShapeSettings").gameObject.SetActive(true);
+        GameManager = GameObject.FindWithTag("GameManager");
+        niceComponent = GameManager.GetComponent<UpdateUIFromJSON>();
+        niceComponent.FindChildWithTag(this.gameObject.transform, "GeneralSettings").gameObject.SetActive(true);
+        niceComponent.FindChildWithTag(this.gameObject.transform, "ShapeSettings").gameObject.SetActive(true);
 
-        GameObject.FindWithTag("GameManager").GetComponent<UpdateUIFromJSON>().UpdateUI();
+        niceComponent.UpdateUI();
+        niceComponent.FindChildWithTag(this.gameObject.transform, "GeneralSettings").Find("GeneratePlanet").gameObject.GetComponent<GeneratePlanet>().Generate();
 
-        GameObject.FindWithTag("GameManager").GetComponent<UpdateUIFromJSON>().FindChildWithTag(this.gameObject.transform, "GeneralSettings").gameObject.SetActive(false);
-        GameObject.FindWithTag("GameManager").GetComponent<UpdateUIFromJSON>().FindChildWithTag(this.gameObject.transform, "ShapeSettings").gameObject.SetActive(false);
+        niceComponent.FindChildWithTag(this.gameObject.transform, "GeneralSettings").gameObject.SetActive(false);
+        niceComponent.FindChildWithTag(this.gameObject.transform, "ShapeSettings").gameObject.SetActive(false);
     }
 }

@@ -18,9 +18,6 @@ public class UpdateFromSlider : MonoBehaviour
 
     public void UpdateText()
     {
-        Debug.Log(sliderToTakeFrom.value);
-        Debug.Log(sliderToTakeFrom.maxValue);
-        Debug.Log(textToUpdate.text);
         textToUpdate.text = $"{sliderToTakeFrom.value} / {sliderToTakeFrom.maxValue}";
     }
 }
