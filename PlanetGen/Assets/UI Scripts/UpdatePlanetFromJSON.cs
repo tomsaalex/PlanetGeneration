@@ -37,8 +37,8 @@ public class UpdatePlanetFromJSON : MonoBehaviour
             planet.shapeSettings.noiseLayers[i].noiseSettings = new NoiseSettings();
             planet.shapeSettings.noiseLayers[i].noiseSettings.simpleNoiseSettings = new NoiseSettings.SimpleNoiseSettings();
 
-            Debug.Log(i);
-            Debug.Log(planet.shapeSettings.noiseLayers[i]);
+            //Debug.Log(i);
+            //Debug.Log(planet.shapeSettings.noiseLayers[i]);
             planet.shapeSettings.noiseLayers[i].enabled = json.noiseLayers[i].enabled;
             planet.shapeSettings.noiseLayers[i].useFirstLayerAsMask = json.noiseLayers[i].useFirstLayerAsMask;
 

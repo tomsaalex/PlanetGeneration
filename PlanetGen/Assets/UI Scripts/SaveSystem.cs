@@ -23,15 +23,15 @@ public static class SaveSystem
 
     public static void PlanetToJSON(PlanetStruct planet)
     {
-        string json = JsonUtility.ToJson(planet);
-        Debug.Log($"The resolution is {currentPlanet.resolution}");
-        Debug.Log(json);
+        string json = JsonUtility.ToJson(planet, true);
+        //Debug.Log($"The resolution is {currentPlanet.resolution}");
+        //Debug.Log(json);
         File.WriteAllText(path, json);
     }
 
     public static void Print()
     {
-        string json = JsonUtility.ToJson(currentPlanet);
+        string json = JsonUtility.ToJson(currentPlanet, true);
         Debug.Log(json);
     }
     [System.Serializable]

@@ -12,21 +12,26 @@ public class UpdateJSON: MonoBehaviour
     public TMP_InputField nameInput;
     public TMP_InputField noiseLayersLengthInput;
     public GameObject noiseLayersContainer;
+    WriteJSONToFile WJTF;
+
     void Awake()
     {
         //UpdateResolution();
+        WJTF = GameObject.FindWithTag("GameManager").GetComponent<WriteJSONToFile>();
     }
 
     public void UpdateName()
     {
         SaveSystem.currentPlanet.name = nameInput.text;
+        WJTF.WriteToFile();
         //SaveSystem.Print();
     }
 
     public void UpdateResolution()
     {
         SaveSystem.currentPlanet.resolution = (int)resolutionSlider.value;
-        Debug.Log("UpdateResolution was called");
+        WJTF.WriteToFile();
+        //Debug.Log("UpdateResolution was called");
         //SaveSystem.Print();
     }
 
@@ -36,12 +41,14 @@ public class UpdateJSON: MonoBehaviour
         ///This needs a tryparse and additional checks for letters and other characters
       
         SaveSystem.currentPlanet.radius = float.Parse(radiusInput.text);
+        WJTF.WriteToFile();
         //SaveSystem.Print();
     }
 
     public void UpdateNumLayers(int value)
     {
         SaveSystem.currentPlanet.noiseLayersLength += value;
+        WJTF.WriteToFile();
     }
 
     /*public void UpdateLayerFilterType(GameObject G)

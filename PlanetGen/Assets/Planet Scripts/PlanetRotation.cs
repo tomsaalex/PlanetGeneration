@@ -14,8 +14,6 @@ public class PlanetRotation : MonoBehaviour
     {
         float speedX = Input.GetAxis("Horizontal");
         float speedY = Input.GetAxis("Vertical");
-        Debug.Log(speedX);
-        Debug.Log(speedY);
         planet.Rotate(speedY, -speedX, 0, Space.World);
     }
 }

@@ -9,7 +9,6 @@ using TMPro;
 public class UpdateUIFromJSON : MonoBehaviour
 {
     public GameObject layersContainer;
-    public Planet planet;
     PlanetStruct json;
     public string path;
     Transform canvas;
