@@ -1,1 +1,7 @@
-{"name":"","resolution":148,"radius":1.0,"noiseLayersLength":4,"noiseLayers":[{"enabled":true,"useFirstLayerAsMask":true,"noiseSettings":{"filterType":0,"strength":0.07999999821186066,"numLayers":7,"baseRoughness":0.6000000238418579,"roughness":0.30000001192092898,"persistence":0.4000000059604645,"CenterX":0.0,"CenterY":0.0,"CenterZ":0.0,"minValue":0.8999999761581421,"weightMultiplier":0.0}},{"enabled":true,"useFirstLayerAsMask":true,"noiseSettings":{"filterType":0,"strength":0.0,"numLayers":0,"baseRoughness":0.0,"roughness":0.0,"persistence":0.0,"CenterX":0.0,"CenterY":0.0,"CenterZ":0.0,"minValue":0.0,"weightMultiplier":0.0}},{"enabled":true,"useFirstLayerAsMask":true,"noiseSettings":{"filterType":0,"strength":0.0,"numLayers":0,"baseRoughness":0.0,"roughness":0.0,"persistence":0.0,"CenterX":0.0,"CenterY":0.0,"CenterZ":0.0,"minValue":0.0,"weightMultiplier":0.0}},{"enabled":true,"useFirstLayerAsMask":true,"noiseSettings":{"filterType":0,"strength":0.0,"numLayers":0,"baseRoughness":0.0,"roughness":0.0,"persistence":0.0,"CenterX":0.0,"CenterY":0.0,"CenterZ":0.0,"minValue":0.0,"weightMultiplier":0.0}}]}
+{
+  "name": "",
+  "resolution": 2,
+  "radius": 1.0,
+  "noiseLayersLength": 0,
+  "noiseLayers": []
+}

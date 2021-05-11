@@ -49,7 +49,6 @@ public class UpdateUIFromJSON : MonoBehaviour
             currentLayer.Find("EnabledToggle").gameObject.GetComponent<Toggle>().isOn = json.noiseLayers[i - 1].enabled;
             currentLayer.Find("UseAsMaskToggle").gameObject.GetComponent<Toggle>().isOn = json.noiseLayers[i - 1].useFirstLayerAsMask;
 
-            currentLayer.Find("Noise Settings").Find("Dropdown").gameObject.GetComponent<TMP_Dropdown>().value = json.noiseLayers[i - 1].noiseSettings.filterType;
             currentLayer.Find("Noise Settings").Find("Simple Noise Settings").Find("StrengthInput").gameObject.GetComponent<TMP_InputField>().text = json.noiseLayers[i - 1].noiseSettings.strength.ToString();
             currentLayer.Find("Noise Settings").Find("Simple Noise Settings").Find("NumLayersSlider").gameObject.GetComponent<Slider>().value = json.noiseLayers[i - 1].noiseSettings.numLayers;
             currentLayer.Find("Noise Settings").Find("Simple Noise Settings").Find("BaseRoughnessInput").gameObject.GetComponent<TMP_InputField>().text = json.noiseLayers[i - 1].noiseSettings.baseRoughness.ToString();

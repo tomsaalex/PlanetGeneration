@@ -29,7 +29,7 @@ public class ShapeGenerator
         {
             firstLayerValue = noiseFilters[0].Evaluate(pointOnUnitSphere);
             if (settings.noiseLayers[0].enabled)
-                elevation += firstLayerValue;
+                elevation = firstLayerValue;
         }
         for (int i = 1; i < noiseFilters.Length; i++)
         { 

@@ -1,1 +1,59 @@
-{"name":"Howdy","resolution":2,"radius":1.0,"noiseLayersLength":0,"noiseLayers":[]}
+{
+    "name": "",
+    "resolution": 72,
+    "radius": 1.0,
+    "noiseLayersLength": 3,
+    "noiseLayers": [
+        {
+            "enabled": true,
+            "useFirstLayerAsMask": true,
+            "noiseSettings": {
+                "filterType": 0,
+                "strength": 0.09000000357627869,
+                "numLayers": 3,
+                "baseRoughness": 1.0,
+                "roughness": 0.8899999856948853,
+                "persistence": 0.8999999761581421,
+                "CenterX": 0.0,
+                "CenterY": 0.009999999776482582,
+                "CenterZ": 0.0,
+                "minValue": 0.9399999976158142,
+                "weightMultiplier": 0.0
+            }
+        },
+        {
+            "enabled": false,
+            "useFirstLayerAsMask": true,
+            "noiseSettings": {
+                "filterType": 0,
+                "strength": 0.0,
+                "numLayers": 0,
+                "baseRoughness": 0.0,
+                "roughness": 0.0,
+                "persistence": 0.0,
+                "CenterX": 0.0,
+                "CenterY": 0.0,
+                "CenterZ": 0.0,
+                "minValue": 0.0,
+                "weightMultiplier": 0.0
+            }
+        },
+        {
+            "enabled": true,
+            "useFirstLayerAsMask": true,
+            "noiseSettings": {
+                "filterType": 0,
+                "strength": 0.0,
+                "numLayers": 0,
+                "baseRoughness": 0.0,
+                "roughness": 0.0,
+                "persistence": 0.0,
+                "CenterX": 0.0,
+                "CenterY": 0.0,
+                "CenterZ": 0.0,
+                "minValue": 0.0,
+                "weightMultiplier": 0.0
+            }
+        }
+    ]
+}

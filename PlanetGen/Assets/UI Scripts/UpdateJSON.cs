@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Globalization;
 
 public class UpdateJSON: MonoBehaviour
 {
@@ -39,8 +40,11 @@ public class UpdateJSON: MonoBehaviour
     {
         ///TODO
         ///This needs a tryparse and additional checks for letters and other characters
-      
-        SaveSystem.currentPlanet.radius = float.Parse(radiusInput.text);
+
+        radiusInput.text = radiusInput.text.Replace(',', '.');
+
+        SaveSystem.currentPlanet.radius = float.Parse(radiusInput.text, CultureInfo.InvariantCulture);
+
         WJTF.WriteToFile();
         //SaveSystem.Print();
     }

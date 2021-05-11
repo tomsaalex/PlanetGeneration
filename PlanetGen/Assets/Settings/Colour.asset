@@ -50,9 +50,9 @@ MonoBehaviour:
     noise:
       filterType: 0
       simpleNoiseSettings:
-        strength: 1.47
+        strength: 0
         numLayers: 8
-        baseRougness: 1.27
+        baseRougness: 0.88
         roughness: 2
         persistence: 0.5
         centre: {x: 0, y: 0, z: 0}

@@ -11,12 +11,9 @@ public class WriteJSONToFile : MonoBehaviour
 
     public void WriteToFile()
     {
-
-        Debug.Log("fdfdf1");
         SaveSystem.PlanetToJSON(SaveSystem.currentPlanet);
         if (autoUpdate.isOn)
         {
-            Debug.Log("fdfdf2");
             GameManager.GetComponent<UpdatePlanetFromJSON>().UpdatePlanet();
             planet.GetComponent<Planet>().OnValidate();
         }

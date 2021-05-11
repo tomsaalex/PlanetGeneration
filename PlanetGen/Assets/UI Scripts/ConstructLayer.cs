@@ -64,6 +64,9 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
 
         strengthString = strengthString.Replace(',', '.');
+
+        this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("StrengthInput").GetComponent<TMP_InputField>().text = strengthString;
+        
         float strengthValue = float.Parse(strengthString, CultureInfo.InvariantCulture);
         
         currentSettings.strength = strengthValue;
@@ -89,6 +92,9 @@ public class ConstructLayer : MonoBehaviour
         string baseRoughnessInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("BaseRoughnessInput").GetComponent<TMP_InputField>().text;
 
         baseRoughnessInput = baseRoughnessInput.Replace(',', '.');
+
+        this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("BaseRoughnessInput").GetComponent<TMP_InputField>().text = baseRoughnessInput;
+
         float baseRoughness = float.Parse(baseRoughnessInput, CultureInfo.InvariantCulture);
         currentSettings.baseRoughness = baseRoughness;
 
@@ -103,6 +109,9 @@ public class ConstructLayer : MonoBehaviour
         string roughnessInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("RoughnessInput").GetComponent<TMP_InputField>().text;
 
         roughnessInput = roughnessInput.Replace(',', '.');
+
+        this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("RoughnessInput").GetComponent<TMP_InputField>().text = roughnessInput;
+
         float roughness = float.Parse(roughnessInput, CultureInfo.InvariantCulture);
         currentSettings.roughness = roughness;
 
@@ -116,8 +125,10 @@ public class ConstructLayer : MonoBehaviour
         //Additional checks like a tryparse
         string persistenceInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("PersistenceInput").GetComponent<TMP_InputField>().text;
 
-
         persistenceInput = persistenceInput.Replace(',', '.');
+
+        this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("PersistenceInput").GetComponent<TMP_InputField>().text = persistenceInput;
+
         float persistence = float.Parse(persistenceInput, CultureInfo.InvariantCulture);
         currentSettings.persistence = persistence;
 
@@ -133,6 +144,9 @@ public class ConstructLayer : MonoBehaviour
 
 
         centerXInput = centerXInput.Replace(',', '.');
+
+        this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("Center").Find("CenterXInput").GetComponent<TMP_InputField>().text = centerXInput;
+
         float centerX = float.Parse(centerXInput, CultureInfo.InvariantCulture);
         currentSettings.CenterX = centerX;
 
@@ -147,6 +161,9 @@ public class ConstructLayer : MonoBehaviour
         string centerYInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("Center").Find("CenterYInput").GetComponent<TMP_InputField>().text;
 
         centerYInput = centerYInput.Replace(',', '.');
+
+        this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("Center").Find("CenterYInput").GetComponent<TMP_InputField>().text = centerYInput;
+
         float centerY = float.Parse(centerYInput, CultureInfo.InvariantCulture);
         currentSettings.CenterY = centerY;
 
@@ -162,6 +179,9 @@ public class ConstructLayer : MonoBehaviour
         string centerZInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("Center").Find("CenterZInput").GetComponent<TMP_InputField>().text;
 
         centerZInput = centerZInput.Replace(',', '.');
+
+        this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("Center").Find("CenterZInput").GetComponent<TMP_InputField>().text = centerZInput;
+
         float centerZ = float.Parse(centerZInput, CultureInfo.InvariantCulture);
         currentSettings.CenterZ = centerZ;
 
@@ -177,6 +197,9 @@ public class ConstructLayer : MonoBehaviour
         string minValueInput = this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("MinValueInput").GetComponent<TMP_InputField>().text;
 
         minValueInput = minValueInput.Replace(',', '.');
+
+        this.transform.Find("Noise Settings").Find("Simple Noise Settings").Find("MinValueInput").GetComponent<TMP_InputField>().text = minValueInput;
+
         float minValue = float.Parse(minValueInput, CultureInfo.InvariantCulture);
         currentSettings.minValue = minValue;
 
