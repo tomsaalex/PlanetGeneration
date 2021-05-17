@@ -13,9 +13,12 @@ public static class SaveSystem
         currentPlanet = new PlanetStruct();
     }
 
+  
+
     public static void GetPath(string pathFromButton)
     {
-        path = Application.dataPath + "/SaveFiles/" + pathFromButton + ".json";
+        path = Application.streamingAssetsPath + "/SaveFiles/" + pathFromButton + ".json";
+        
         GameObject.FindWithTag("GameManager").GetComponent<UpdatePlanetFromJSON>().path = path;
         GameObject.FindWithTag("GameManager").GetComponent<UpdateUIFromJSON>().path = path;
         Debug.Log(path);

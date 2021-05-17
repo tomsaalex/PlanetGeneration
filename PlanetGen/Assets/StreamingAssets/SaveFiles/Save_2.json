@@ -1,0 +1,25 @@
+{
+    "name": "",
+    "resolution": 100,
+    "radius": 1.0,
+    "noiseLayersLength": 1,
+    "noiseLayers": [
+        {
+            "enabled": true,
+            "useFirstLayerAsMask": true,
+            "noiseSettings": {
+                "filterType": 0,
+                "strength": 0.0,
+                "numLayers": 6,
+                "baseRoughness": 0.0,
+                "roughness": 0.0,
+                "persistence": 0.0,
+                "CenterX": 0.0,
+                "CenterY": 0.0,
+                "CenterZ": 0.0,
+                "minValue": 0.0,
+                "weightMultiplier": 0.0
+            }
+        }
+    ]
+}
