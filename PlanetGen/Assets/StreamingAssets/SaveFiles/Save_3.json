@@ -1,1 +1,42 @@
-{ "name": "", "resolution": 100, "radius": 1.0, "noiseLayersLength": 0, "noiseLayers": []}
+{
+    "name": "",
+    "resolution": 100,
+    "radius": 1.0,
+    "noiseLayersLength": 2,
+    "noiseLayers": [
+        {
+            "enabled": true,
+            "useFirstLayerAsMask": true,
+            "noiseSettings": {
+                "filterType": 0,
+                "strength": 0.09000000357627869,
+                "numLayers": 2,
+                "baseRoughness": 1.5,
+                "roughness": 0.20000000298023225,
+                "persistence": 1.0,
+                "CenterX": 0.0,
+                "CenterY": 0.0,
+                "CenterZ": 0.0,
+                "minValue": 1.0,
+                "weightMultiplier": 0.0
+            }
+        },
+        {
+            "enabled": true,
+            "useFirstLayerAsMask": true,
+            "noiseSettings": {
+                "filterType": 0,
+                "strength": 1.0,
+                "numLayers": 2,
+                "baseRoughness": 2.0,
+                "roughness": 0.20000000298023225,
+                "persistence": 1.0,
+                "CenterX": 0.5,
+                "CenterY": 0.30000001192092898,
+                "CenterZ": 0.10000000149011612,
+                "minValue": 0.9399999976158142,
+                "weightMultiplier": 0.0
+            }
+        }
+    ]
+}
